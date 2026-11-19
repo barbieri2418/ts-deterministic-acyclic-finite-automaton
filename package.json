@@ -1,0 +1,17 @@
+{
+  "name": "ts-deterministic-acyclic-finite-automaton",
+  "version": "0.1.0",
+  "description": "Builds a minimal DAFSA from a fixed set of strings for storage and lookup.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "dependencies": {}
+}
