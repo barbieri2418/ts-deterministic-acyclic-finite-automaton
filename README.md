@@ -26,3 +26,10 @@ The empty string is a valid word. `new DeterministicAcyclicFiniteAutomaton([''])
 - `has(word)` — returns `true` if `word` is in the language. Throws a `TypeError` for non-strings.
 - `words()` — returns all words in lexicographic order as a fresh array.
 - `stateCount()` — returns the number of distinct states in the minimised automaton, including the root.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
